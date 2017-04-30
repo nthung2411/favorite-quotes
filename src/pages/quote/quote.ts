@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, ViewController, NavParams } from 'ionic-angular';
 
 /**
  * Generated class for the Quote page.
@@ -12,13 +12,19 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   selector: 'page-quote',
   templateUrl: 'quote.html',
 })
-export class QuotePage {
+export class QuotePage{  
+  person:string;
+  text:string;
+  constructor(
+    private viewCtrl: ViewController,
+    private navParams: NavParams){}
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  onClose(remove = false){
+    this.viewCtrl.dismiss(remove);
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad Quote');
-  }
-
+  ionViewDidLoad(){
+    this.person = this.navParams.get('person');
+    this.text = this.navParams.get('text');
+  } 
 }

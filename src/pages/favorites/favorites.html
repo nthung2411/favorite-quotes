@@ -8,5 +8,12 @@
 
 
 <ion-content padding>
-
+  <ion-list>
+    <ion-item 
+      *ngFor="let favoriteQuote of favoriteQuotes;let i=index"
+      (click)="onViewQuote(favoriteQuote);">      
+      <h3>{{favoriteQuote.text}}</h3>
+      <p class='author'>{{favoriteQuote.person}}</p>  
+    </ion-item>
+  </ion-list>
 </ion-content>
