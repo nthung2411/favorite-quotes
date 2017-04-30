@@ -8,13 +8,6 @@
 
 
 <ion-content padding>
-<!--<ion-list>
-  <ion-item *ngFor="let quote of quoteGroup.quotes">
-    <h3>#{{quote.id}}</h3>
-    <p>{{quote.text}}</p>
-    <p>{{quote.person}}</p>
-  </ion-item>
-</ion-list>-->
 <ion-card *ngFor="let quote of quoteGroup.quotes;let i = index">
   <ion-card-header text-center>
       #{{i+1}}
