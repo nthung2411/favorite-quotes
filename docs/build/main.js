@@ -55656,7 +55656,7 @@ var FavoritesPage = (function () {
 FavoritesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-favorites',template:/*ion-inline-start:"D:\favorite-quote\src\pages\favorites\favorites.html"*/'<ion-header>\n\n  <ion-navbar>    \n    <ion-title text-center>Favorites</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quote\src\pages\favorites\favorites.html"*/,
+        selector: 'page-favorites',template:/*ion-inline-start:"D:\favorite-quotes\src\pages\favorites\favorites.html"*/'<ion-header>\n\n  <ion-navbar>    \n    <ion-title text-center>Favorites</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quotes\src\pages\favorites\favorites.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], FavoritesPage);
@@ -55670,6 +55670,7 @@ FavoritesPage = __decorate([
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(23);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__data_quotes__ = __webpack_require__(269);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return LibraryPage; });
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -55677,33 +55678,22 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
 
 
-/**
- * Generated class for the Library page.
- *
- * See http://ionicframework.com/docs/components/#navigation for more info
- * on Ionic pages and navigation.
- */
+
 var LibraryPage = (function () {
-    function LibraryPage(navCtrl, navParams) {
-        this.navCtrl = navCtrl;
-        this.navParams = navParams;
+    function LibraryPage() {
     }
-    LibraryPage.prototype.ionViewDidLoad = function () {
-        console.log('ionViewDidLoad Library');
+    LibraryPage.prototype.ngOnInit = function () {
+        this.quoteCollection = __WEBPACK_IMPORTED_MODULE_2__data_quotes__["a" /* default */];
     };
     return LibraryPage;
 }());
 LibraryPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-library',template:/*ion-inline-start:"D:\favorite-quote\src\pages\library\library.html"*/'<!--\n  Generated template for the Library page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-capitalize text-center>library</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quote\src\pages\library\library.html"*/,
-    }),
-    __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
+        selector: 'page-library',template:/*ion-inline-start:"D:\favorite-quotes\src\pages\library\library.html"*/'<!--\n  Generated template for the Library page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title text-capitalize text-center>quotes library</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n<h3 text-center>Select your favorite Quote</h3>\n<ion-list>\n  <button ion-item *ngFor="let quote of quoteCollection" no-padding>\n    <ion-icon [name]="quote.icon" item-left></ion-icon>\n    <h2>{{quote.category | uppercase}}</h2>\n    <p>{{quote.quotes.length}} Quotes</p>\n  </button>\n</ion-list>\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quotes\src\pages\library\library.html"*/,
+    })
 ], LibraryPage);
 
 //# sourceMappingURL=library.js.map
@@ -74513,7 +74503,7 @@ var QuotePage = (function () {
 QuotePage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-quote',template:/*ion-inline-start:"D:\favorite-quote\src\pages\quote\quote.html"*/'<!--\n  Generated template for the Quote page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>quote</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quote\src\pages\quote\quote.html"*/,
+        selector: 'page-quote',template:/*ion-inline-start:"D:\favorite-quotes\src\pages\quote\quote.html"*/'<!--\n  Generated template for the Quote page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>quote</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quotes\src\pages\quote\quote.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], QuotePage);
@@ -74558,7 +74548,7 @@ var QuotesPage = (function () {
 QuotesPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-quotes',template:/*ion-inline-start:"D:\favorite-quote\src\pages\quotes\quotes.html"*/'<!--\n  Generated template for the Quotes page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>quotes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quote\src\pages\quotes\quotes.html"*/,
+        selector: 'page-quotes',template:/*ion-inline-start:"D:\favorite-quotes\src\pages\quotes\quotes.html"*/'<!--\n  Generated template for the Quotes page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>quotes</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quotes\src\pages\quotes\quotes.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], QuotesPage);
@@ -74603,7 +74593,7 @@ var SettingsPage = (function () {
 SettingsPage = __decorate([
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* IonicPage */])(),
     __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({
-        selector: 'page-settings',template:/*ion-inline-start:"D:\favorite-quote\src\pages\settings\settings.html"*/'<!--\n  Generated template for the Settings page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>settings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quote\src\pages\settings\settings.html"*/,
+        selector: 'page-settings',template:/*ion-inline-start:"D:\favorite-quotes\src\pages\settings\settings.html"*/'<!--\n  Generated template for the Settings page.\n\n  See http://ionicframework.com/docs/components/#navigation for more info on\n  Ionic pages and navigation.\n-->\n<ion-header>\n\n  <ion-navbar>\n    <ion-title>settings</ion-title>\n  </ion-navbar>\n\n</ion-header>\n\n\n<ion-content padding>\n\n</ion-content>\n'/*ion-inline-end:"D:\favorite-quotes\src\pages\settings\settings.html"*/,
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* NavController */], __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["g" /* NavParams */]])
 ], SettingsPage);
@@ -74648,7 +74638,7 @@ var MyApp = (function () {
     return MyApp;
 }());
 MyApp = __decorate([
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\favorite-quote\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\favorite-quote\src\app\app.html"*/
+    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_5" /* Component */])({template:/*ion-inline-start:"D:\favorite-quotes\src\app\app.html"*/'<ion-nav [root]="rootPage"></ion-nav>\n'/*ion-inline-end:"D:\favorite-quotes\src\app\app.html"*/
     }),
     __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
 ], MyApp);
@@ -111453,6 +111443,89 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
 //# sourceMappingURL=main.js.map
+
+/***/ }),
+/* 264 */,
+/* 265 */,
+/* 266 */,
+/* 267 */,
+/* 268 */,
+/* 269 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony default export */ __webpack_exports__["a"] = [
+    {
+        category: 'inspirational',
+        quotes: [
+            {
+                id: '1',
+                person: 'Theodore Roosevelt',
+                text: 'Believe you can and you\'re halfway there'
+            },
+            {
+                id: '2',
+                person: 'Norman Vincent Peale',
+                text: 'Change your thoughts and you change your world.'
+            },
+            {
+                id: '3',
+                person: 'Robert H. Schuller',
+                text: 'What great thing would you attempt if you knew you could not fail?'
+            }
+        ],
+        icon: 'brush'
+    },
+    {
+        category: 'ability',
+        quotes: [
+            {
+                id: '4',
+                person: 'John Wooden',
+                text: 'Ability may get you to the top, but it takes character to keep you there.'
+            },
+            {
+                id: '5',
+                person: 'Robert Frost',
+                text: 'Education is the ability to listen to almost anything without losing your temper.'
+            }
+        ],
+        icon: 'bicycle'
+    },
+    {
+        category: 'enthusiasm',
+        quotes: [
+            {
+                id: '6',
+                person: 'Benjamin Disraeli',
+                text: 'Every product of genius must be the product of enthusiasm.'
+            },
+            {
+                id: '7',
+                person: 'Norman Vincent Peale',
+                text: 'Enthusiasm releases the drive to carry you over obstacles and adds significance to all you do.'
+            }
+        ],
+        icon: 'battery-charging'
+    },
+    {
+        category: 'motivational',
+        quotes: [
+            {
+                id: '8',
+                person: 'Jim Rohn',
+                text: 'Either you run the day or the day runs you.'
+            },
+            {
+                id: '9',
+                person: 'Donna Brazile',
+                text: 'I was motivated to be different in part because I was different.'
+            }
+        ],
+        icon: 'body'
+    }
+];
+//# sourceMappingURL=quotes.js.map
 
 /***/ })
 /******/ ]);
