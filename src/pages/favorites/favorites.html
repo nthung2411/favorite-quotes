@@ -1,6 +1,16 @@
 <ion-header>
 
-  <ion-navbar>    
+  <ion-navbar>
+    <ion-buttons start>
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>
+    <!--<ion-buttons end>
+      <button ion-button>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-buttons>-->
     <ion-title text-center>Favorites</ion-title>
   </ion-navbar>
 
@@ -9,11 +19,19 @@
 
 <ion-content padding>
   <ion-list>
-    <ion-item 
-      *ngFor="let favoriteQuote of favoriteQuotes;let i=index"
-      (click)="onViewQuote(favoriteQuote);">      
-      <h3>{{favoriteQuote.text}}</h3>
-      <p class='author'>{{favoriteQuote.person}}</p>  
-    </ion-item>
+    <ion-item-sliding *ngFor="let favoriteQuote of favoriteQuotes;let i=index">
+        <ion-item (click)="onViewQuote(favoriteQuote);">      
+          <h3>{{favoriteQuote.text}}</h3>
+          <p class='author'>{{favoriteQuote.person}}</p>  
+        </ion-item>
+        <ion-item-options>
+          <button ion-button 
+                  color="danger"
+                  (click)="onRemoveFromFavorites(favoriteQuote)">
+            <ion-icon name="trash"></ion-icon>
+            Delete
+          </button>
+        </ion-item-options>
+    </ion-item-sliding>
   </ion-list>
 </ion-content>

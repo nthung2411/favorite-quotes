@@ -25,9 +25,13 @@ export class FavoritesPage {
     modal.present();
     modal.onDidDismiss((remove:boolean) => {
       if(remove) {
-        this.quotesService.removeQuoteFromFavorites(quote);
-        this.favoriteQuotes = this.quotesService.getQuoteFavorites();
+        this.onRemoveFromFavorites(quote);
       }
     });
   }
+
+  onRemoveFromFavorites(quote: Quote) {
+    this.quotesService.removeQuoteFromFavorites(quote);
+    this.favoriteQuotes = this.quotesService.getQuoteFavorites();
+  }  
 }
