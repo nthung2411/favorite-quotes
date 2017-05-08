@@ -20,10 +20,10 @@
 
 <ion-content padding>
 <h3 text-center>Select your favorite Quote</h3>
-<ion-list>
+<ion-list [virtualScroll]="quoteCollection" approxItemHeight="63px" >
   <button 
     ion-item 
-    *ngFor="let quote of quoteCollection" no-padding
+    *virtualItem="let quote" no-padding
     [navPush]="quotesPage"
     [navParams]="quote">
     <ion-icon [name]="quote.icon" item-left></ion-icon>
